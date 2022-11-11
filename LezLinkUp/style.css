@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Raleway:wght@100;300;500;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    height: 100vh;
+    background-image: url(./images/background3.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.navbar h1 {
+    margin-left: 1rem;
+}
+
+nav {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    font-size: 1.1rem;
+}
+
+nav ul a {
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+}
+
+
+.plain:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #87c5e0;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+
+.plain:hover:after { transform: scaleX(1); }
+
+#tickets {
+    background-color: #D5389B;
+    padding: 0.5rem 0.8rem;
+    border-radius: 2px;
+}
+
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 4rem;
+}
+
+.main-container h1 {
+    font-size: 4rem;
+    margin-bottom: 0.7rem;
+}
+
+.main-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Gruppo';
+    text-align: center;
+}
+
+.main-container button {
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 1rem 3.5rem;
+    font-size: 1.5rem;
+    background-color: #D5389B;
+    border: 0;
+    border-radius: 2px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.main-container button:hover, .main-container button:active, .main-container button:focus {
+    background-color: #87c5e0;
+}
+
+main {
+    height: 100vh;
+}
+
+main h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.event-tiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.event {
+    width: 25%;
+    background-color: #292929;
+    border-radius: 5px;
+    min-width: 300px;
+    margin: 1rem;
+}
+
+.event .text {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.buy-link {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    background:
+      linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.buy-link:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.name {
+    font-size: 2rem;
+    padding-top: 0.25rem;
+}
+
+.date, .location {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+.event img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.media-container {
+    width: 100vw;
+    height: auto;
+}
+
+.media-tiles {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.media {
+    width: 27%;
+    margin-bottom: 3rem;
+    min-width: 350px;
+}
+
+.media img{
+    width: 100%;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-container h3 {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.social-media {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-grow: 1;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    .navbar {
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+
+
+    ul li {
+        min-width: fit-content;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+    ul li:nth-of-type(4) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    nav ul {
+        width: 100vw;
+        justify-content: space-around;
+    }
+    .navbar {
+        margin: 0;
+        width: 100vw;
+    }
+}
